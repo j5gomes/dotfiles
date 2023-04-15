@@ -17,6 +17,8 @@ alias pst="mdless ~/personal/projects/projects.md"
 alias dt="cd ~/dotfiles"
 alias vc="cd ~/.config/nvim/lua/user"
 
+alias rvw="gh repo view -w"
+
 # pnpm
 export PNPM_HOME="/Users/joaogomes/Library/pnpm"
 export PATH="$PNPM_HOME:$PATH"
