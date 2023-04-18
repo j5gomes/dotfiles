@@ -17,12 +17,14 @@ export NVM_DIR="$HOME/.nvm"
 
 # Alias
 alias vim="nvim"
+alias vm="nvim ."
 alias pp="cd ~/personal/projects"
 alias pst="mdless ~/personal/projects/projects.md"
 alias dotf="cd ~/dotfiles"
 alias vconf="cd ~/.config/nvim/lua/user"
-
+alias tm="tmux"
 alias rvw="gh repo view -w"
+alias cl="clear"
 
 # pnpm
 export PNPM_HOME="/Users/joaogomes/Library/pnpm"
