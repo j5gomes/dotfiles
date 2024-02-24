@@ -110,6 +110,7 @@ alias sv='sudoedit'
 alias sk='killall ssh-agent && source ~/.zshrc'
 alias t='tmux'
 alias e='exit'
+alias code='codium '
 
 # git
 alias gp='git pull'
@@ -137,10 +138,11 @@ alias ashia="nvim ~/work/ashia.md"
 alias notes="nvim ~/work/notes.md"
 
 # env variables
-export VISUAL=nvim
-export EDITOR=nvim
+export VISUAL=vim
+export EDITOR=vim
 
 # NVM
 export NVM_DIR="$HOME/.nvm"
 [ -s "/usr/local/opt/nvm/nvm.sh" ] && \. "/usr/local/opt/nvm/nvm.sh"                                       # This loads nvm
 [ -s "/usr/local/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/usr/local/opt/nvm/etc/bash_completion.d/nvm" # This loads nvm bash_completion
+
