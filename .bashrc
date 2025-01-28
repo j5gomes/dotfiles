@@ -1,7 +1,3 @@
-#
-# ~/.bashrc
-#
-
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
@@ -10,17 +6,22 @@ set -o vi
 
 # keybinds
 bind -x '"\C-l":clear'
+
 # ~~~~~~~~~~~~~~~ Environment Variables ~~~~~~~~~~~~~~~~~~~~~~~~
 
 # config
 export BROWSER="firefox"
 
 # directories
-export REPOS="$HOME/Repos"
+export REPOS="$HOME/repos"
+export NOTES="$HOME/notes"
+export WORK_ORG="significa"
 export GITUSER="joaogomesdev"
-export GHREPOS="$REPOS/github.com/$GITUSER"
-export DOTFILES="$GHREPOS/dotfiles"
+export GH_WORK_REPOS="$REPOS/github.com/$WORK_ORG"
+export GH_PERSONAL_REPOS="$REPOS/github.com/$GITUSER"
+export DOTFILES="$GH_PERSONAL_REPOS/dotfiles"
 export SECOND_BRAIN="$HOME/second-brain"
+export PROJECTNOTES="$NOTES/projects"
 
 # ~~~~~~~~~~~~~~~ History ~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -54,10 +55,34 @@ clone() {
 	cd "$name"
 } && export -f clone
 
+cloneegg() {
+	local repo="$1" user
+	local repo="${repo#https://github.com/}"
+	local repo="${repo#git@github.com:}"
+	if [[ $repo =~ / ]]; then
+		user="${repo%%/*}"
+	else
+		user="$WORK_ORG"
+		[[ -z "$user" ]] && user="$USER"
+	fi
+	local name="${repo##*/}"
+	local userd="$REPOS/github.com/$user"
+	local path="$userd/$name"
+	[[ -d "$path" ]] && cd "$path" && return
+	mkdir -p "$userd"
+	cd "$userd"
+	echo gh repo clone "$user/$name" -- --recurse-submodule
+	gh repo clone "$user/$name" -- --recurse-submodule
+	cd "$name"
+} && export -f cloneegg
+
 # ~~~~~~~~~~~~~~~ Prompt ~~~~~~~~~~~~~~~~~~~~~~~~
 
-PROMPT_COMMAND='PS1_CMD1=$(git branch 2>/dev/null | grep '"'"'*'"'"' | colrm 1 2)'
-PS1='\u@\w (${PS1_CMD1}) '
+parse_git_branch() {
+	git branch 2>/dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/'
+}
+
+PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u\[\033[00m\]:\[\033[01;34m\]\w\[\033[01;31m\]$(parse_git_branch)\[\033[00m\]\$ '
 
 # ~~~~~~~~~~~~~~~ Aliases ~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -66,8 +91,11 @@ alias v=nvim
 
 # cd
 alias ..="cd .."
-alias dot='cd $GHREPOS/dotfiles'
+alias c="clear"
+alias dot='cd $GH_PERSONAL_REPOS/dotfiles'
 alias repos='cd $REPOS'
+alias eggrepos='cd $GH_WORK_REPOS'
+alias pn='cd $PROJECTNOTES'
 
 # ls
 alias ls='ls --color=auto'
@@ -82,6 +110,7 @@ alias sv='sudoedit'
 alias sk='killall ssh-agent && source ~/.zshrc'
 alias t='tmux'
 alias e='exit'
+alias code='codium '
 
 # git
 alias gp='git pull'
@@ -109,12 +138,10 @@ alias ashia="nvim ~/work/ashia.md"
 alias notes="nvim ~/work/notes.md"
 
 # env variables
-export VISUAL=nvim
-export EDITOR=nvim
+export VISUAL=vim
+export EDITOR=vim
 
 # NVM
 export NVM_DIR="$HOME/.nvm"
 [ -s "/usr/local/opt/nvm/nvm.sh" ] && \. "/usr/local/opt/nvm/nvm.sh"                                       # This loads nvm
 [ -s "/usr/local/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/usr/local/opt/nvm/etc/bash_completion.d/nvm" # This loads nvm bash_completion
-
-export PATH="~/.config/bin:$PATH"
