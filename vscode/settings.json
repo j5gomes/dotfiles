@@ -22,6 +22,7 @@
   "workbench.layoutControl.enabled": false,
   "workbench.settings.applyToAllProfiles": ["workbench.colorCustomizations"],
   "workbench.sideBar.location": "right",
+  "workbench.editor.editorActionsLocation": "hidden",
 
   // #################################
   // #######  WINDOW SETTINGS  #######
@@ -170,22 +171,28 @@
   // ############################
   "apc.electron": {
     "trafficLightPosition": {
-      "x": 11,
-      "y": 10
+      "x": -500,
+      "y": 0
     },
-    "frame": false,
-    "opacity": 0.95,
+    "window.customTitleBarVisibility": "never",
+    "apc.menubar.compact": true,
+    "backgroundColor": "rgba(123, 123, 123, 0.5)",
+    "transparent": true,
+    "titleBarStyle": "hiddenInset",
     "vibrancy": "ultra-dark",
-    "visualEffectState": "active",
-    "titleBarStyle": "hidden",
-    "backgroundMaterial": "acrylic",
-    "backgroundColor": "#00000000"
+    "opacity": 0.95,
+    "visualEffectState": "active"
   },
   "apc.statusBar": {
-    "fontSize": 10
+    "fontSize": 10,
+    "height": 18
   },
   "apc.header": {
-    "height": 20
+    "height": 18
+  },
+  "apc.stylesheet": {
+    ".title-label > h2": "display: none", // Remove primary side bar title
+    ".nosidebar .inline-tabs-placeholder": "width: 75px" // Align tabs to not overlap window controls when primary bar is hidden
   },
 
   // ###########################################
@@ -244,5 +251,7 @@
   "search.searchOnType": false,
   "terminal.integrated.gpuAcceleration": "on",
   "editor.codeLens": false,
-  "workbench.statusBar.visible": false
+  "workbench.welcomePage.walkthroughs.openOnInstall": false,
+  "svelte.enable-ts-plugin": true,
+  "window.density.editorTabHeight": "compact"
 }
