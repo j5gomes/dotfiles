@@ -1,5 +1,15 @@
 [
   // ###################################
+  // ########### KEY MAPS ##############
+  // ###################################
+  {
+    "key": "ctrl+p", // go to next problem
+    "command": "runCommands",
+    "args": {
+      "commands": ["editor.action.marker.nextInFiles"]
+    }
+  }
+  // ###################################
   // ########$$$ TOGGLE UI #############
   // ###################################
   {
@@ -26,3 +36,4 @@
     "command": "workbench.action.navigateDown"
   }
 ]
+
