@@ -1,0 +1,16 @@
+code --install-extension bradlc.vscode-tailwindcss
+code --install-extension dbaeumer.vscode-eslint
+code --install-extension drcika.apc-extension
+code --install-extension eamodio.gitlens
+code --install-extension esbenp.prettier-vscode
+code --install-extension kalimahapps.tailwindcss-kit
+code --install-extension miguelsolorio.fluent-icons
+code --install-extension ms-vscode.cmake-tools
+code --install-extension ms-vscode.cpptools
+code --install-extension oxygentheme.oxygen-theme
+code --install-extension pkief.material-icon-theme
+code --install-extension rvest.vs-code-prettier-eslint
+code --install-extension styled-components.vscode-styled-components
+code --install-extension svelte.svelte-vscode
+code --install-extension twxs.cmake
+code --install-extension vscodevim.vim
