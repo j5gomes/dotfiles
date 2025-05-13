@@ -14,7 +14,7 @@
   "workbench.startupEditor": "none",
   "workbench.iconTheme": "material-icon-theme",
   "workbench.productIconTheme": "fluent-icons",
-  "workbench.preferredDarkColorTheme": "Tokyo Night",
+  "workbench.preferredDarkColorTheme": "Tokyo Night Storm",
   "workbench.colorCustomizations": {
     "terminal.background": "#00000000"
   },
@@ -96,6 +96,14 @@
     {
       "before": ["<S-tab>"],
       "commands": ["workbench.action.previousEditor"]
+    },
+    {
+      "before": ["<leader>", "f", "f"],
+      "commands": ["workbench.action.quickOpen"]
+    },
+    {
+      "before": ["<leader>", "f", "w"],
+      "commands": ["workbench.action.findInFiles"]
     }
   ],
   "vim.insertModeKeyBindings": [
@@ -165,7 +173,6 @@
     "<C-z>": false,
     "<C-y>": false
   },
-
   // ############################
   // ## APC EXTENSION SETTINGS ##
   // ############################
@@ -224,11 +231,6 @@
     ["cx\\(([^)]*)\\)", "(?:'|\"|`)([^']*)(?:'|\"|`)"],
     ["cnva\\(([^)]*)\\)", "(?:'|\"|`)([^']*)(?:'|\"|`)"]
   ],
-
-  // #################################
-  // ######### MISCELLANEOUS #########
-  // #################################
-  "breadcrumbs.enabled": false,
   "update.mode": "manual",
   "extensions.autoCheckUpdates": false,
   "security.workspace.trust.untrustedFiles": "open",
