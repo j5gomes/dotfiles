@@ -5,16 +5,33 @@
 # Set to superior editing mode
 set -o vi
 
-# export PATH=$HOME/bin:/usr/local/bin:$PATH
-
-# Path to your oh-my-zsh installation.
+export PATH=$HOME/bin:/usr/local/bin:$PATH
 export ZSH=$HOME/.oh-my-zsh
 
 ZSH_THEME="robbyrussell"
 
-plugins=(git)
+plugins=(
+    	git
+    	zsh-autosuggestions
+    	zsh-syntax-highlighting
+    	z
+    )
 
 source $ZSH/oh-my-zsh.sh
+
+# ~~~~~~~~~~~~~~~ Git Prompt ~~~~~~~~~~~~~~~~~~~~~~~~ 
+
+parse_git_branch() {
+  local branch
+  branch=$(git symbolic-ref --short HEAD 2>/dev/null)
+  if [[ -n $branch ]]; then
+    echo "($branch)"
+  fi
+}
+
+setopt prompt_subst
+
+PS1='%F{green}%n%f:%F{blue}%~%f%F{red}$(parse_git_branch)%f~ '
 
 # ~~~~~~~~~~~~~~~ Environment Variables ~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -22,8 +39,8 @@ source $ZSH/oh-my-zsh.sh
 export BROWSER="firefox"
 
 # directories
-export REPOS="$HOME/Repos"
-export GITUSER="joaogomesdev"
+export REPOS="$HOME/repos"
+export GITUSER="j5gomes"
 export GHREPOS="$REPOS/github.com/$GITUSER"
 export DOTFILES="$GHREPOS/dotfiles"
 export SECOND_BRAIN="$HOME/second-brain"
@@ -80,20 +97,6 @@ alias in="cd \$SECOND_BRAIN/0-inbox/"
 # fun
 alias fishies=asciiquarium
 
-# work
-alias todo="nvim ~/work/todo.md"
-alias tfp="nvim ~/work/tfp.md"
-alias ashia="nvim ~/work/ashia.md"
-alias notes="nvim ~/work/notes.md"
-
 # env variables
 export VISUAL=nvim
 export EDITOR=nvim
-
-# NVM
-export NVM_DIR="$HOME/.nvm"
-[ -s "/usr/local/opt/nvm/nvm.sh" ] && \. "/usr/local/opt/nvm/nvm.sh"                                       # This loads nvm
-[ -s "/usr/local/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/usr/local/opt/nvm/etc/bash_completion.d/nvm" # This loads nvm bash_completion
-
-export PATH="~/.config/bin:$PATH"
-source /usr/local/opt/spaceship/spaceship.zsh
