@@ -14,13 +14,17 @@
   "workbench.startupEditor": "none",
   "workbench.iconTheme": "material-icon-theme",
   "workbench.productIconTheme": "fluent-icons",
-  "workbench.preferredDarkColorTheme": "Tokyo Night Storm",
+  "workbench.preferredDarkColorTheme": "Night Owl (No Italics)",
+  "workbench.colorTheme": "Night Owl (No Italics)",
   "workbench.colorCustomizations": {
     "terminal.background": "#00000000"
   },
   "workbench.layoutControl.enabled": false,
   "workbench.settings.applyToAllProfiles": ["workbench.colorCustomizations"],
   "workbench.editor.editorActionsLocation": "hidden",
+  "workbench.activityBar.location": "hidden",
+  "workbench.activityBar.visible": false,
+  "workbench.sideBar.location": "right",
 
   // #################################
   // #######  WINDOW SETTINGS  #######
@@ -61,7 +65,7 @@
   "editor.cursorStyle": "line",
   "editor.cursorBlinking": "solid",
   "editor.wordWrap": "bounded",
-  "editor.wordWrapColumn": 100,
+  "editor.wordWrapColumn": 150,
   "editor.quickSuggestions": {
     "other": true,
     "comments": false,
@@ -258,9 +262,14 @@
   "window.density.editorTabHeight": "compact",
   "makefile.configureOnOpen": true,
   "tabnine.experimentalAutoImports": true,
-  "workbench.sideBar.location": "right",
   "[json]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "workbench.activityBar.location": "hidden"
+
+  // ################################
+  // ########### OBSIDIAN ###########
+  // ################################
+  "obsidian-md-vsc.defaultVault": "second-brain",
+  "obsidian-md-vsc.defaultVaultPath": "/Users/jgomes/repos/github/j5gomes/second-brain",
+  "obsidian-md-vsc.defaultNote": "0-inbox/inbox"
 }
