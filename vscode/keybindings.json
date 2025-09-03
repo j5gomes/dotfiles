@@ -9,6 +9,20 @@
       "commands": ["editor.action.marker.nextInFiles"]
     }
   },
+  {
+    "key": "ctrl+[", // fold
+    "command": "runCommands",
+    "args": {
+      "commands": ["editor.fold"]
+    }
+  },
+  {
+    "key": "ctrl+]", // go to next problem
+    "command": "runCommands",
+    "args": {
+      "commands": ["editor.unfold"]
+    }
+  },
   // ###################################
   // ########$$$ TOGGLE UI #############
   // ###################################
@@ -34,6 +48,14 @@
   {
     "key": "ctrl+j",
     "command": "workbench.action.navigateDown"
+  },
+  {
+    "key": "alt+p",
+    "command": "search-preview.quickOpenWithPreview"
+  },
+  {
+    "key": "ctrl+c",
+    "command": "workbench.action.editor.nextChange",
+    "when": "editorTextFocus && !textCompareEditorActive"
   }
 ]
-
