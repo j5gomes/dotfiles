@@ -14,8 +14,8 @@
   "workbench.startupEditor": "none",
   "workbench.iconTheme": "material-icon-theme",
   "workbench.productIconTheme": "fluent-icons",
-  "workbench.preferredDarkColorTheme": "Night Owl (No Italics)",
-  "workbench.colorTheme": "Night Owl (No Italics)",
+  "workbench.preferredDarkColorTheme": "Shades of Purple (Super Dark)",
+  "workbench.colorTheme": "Shades of Purple (Super Dark)",
   "workbench.colorCustomizations": {
     "terminal.background": "#00000000"
   },
@@ -23,7 +23,6 @@
   "workbench.settings.applyToAllProfiles": ["workbench.colorCustomizations"],
   "workbench.editor.editorActionsLocation": "hidden",
   "workbench.activityBar.location": "hidden",
-  "workbench.activityBar.visible": false,
   "workbench.sideBar.location": "right",
 
   // #################################
@@ -31,8 +30,7 @@
   // #################################
   "window.zoomLevel": 0.8,
   "window.autoDetectColorScheme": true,
-  "window.commandCenter": false,
-  "window.titleBarStyle": "native",
+  "window.commandCenter": true,
   "window.restoreWindows": "one",
   "window.newWindowDimensions": "maximized",
 
@@ -261,7 +259,6 @@
   "svelte.enable-ts-plugin": true,
   "window.density.editorTabHeight": "compact",
   "makefile.configureOnOpen": true,
-  "tabnine.experimentalAutoImports": true,
   "[json]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
@@ -271,5 +268,6 @@
   // ################################
   "obsidian-md-vsc.defaultVault": "second-brain",
   "obsidian-md-vsc.defaultVaultPath": "/Users/jgomes/repos/github/j5gomes/second-brain",
-  "obsidian-md-vsc.defaultNote": "0-inbox/inbox"
+  "obsidian-md-vsc.defaultNote": "0-inbox/inbox",
+  "workbench.secondarySideBar.defaultVisibility": "visible"
 }
