@@ -6,7 +6,6 @@
   "explorer.compactFolders": false,
   "explorer.sortOrder": "foldersNestsFiles",
   "explorer.confirmDragAndDrop": false,
-  "explorer.openEditors.visible": 0,
 
   // ###################################
   // #### WORKBENCH AND UI SETTINGS ####
@@ -22,15 +21,16 @@
   "workbench.layoutControl.enabled": false,
   "workbench.settings.applyToAllProfiles": ["workbench.colorCustomizations"],
   "workbench.editor.editorActionsLocation": "hidden",
-  "workbench.activityBar.location": "hidden",
   "workbench.sideBar.location": "right",
+  "workbench.navigationControl.enabled": false,
+  "workbench.activityBar.location": "hidden",
+  "breadcrumbs.enabled": false,
 
   // #################################
   // #######  WINDOW SETTINGS  #######
   // #################################
   "window.zoomLevel": 0.8,
   "window.autoDetectColorScheme": true,
-  "window.commandCenter": true,
   "window.restoreWindows": "one",
   "window.newWindowDimensions": "maximized",
 
@@ -269,5 +269,9 @@
   "obsidian-md-vsc.defaultVault": "second-brain",
   "obsidian-md-vsc.defaultVaultPath": "/Users/jgomes/repos/github/j5gomes/second-brain",
   "obsidian-md-vsc.defaultNote": "0-inbox/inbox",
-  "workbench.secondarySideBar.defaultVisibility": "visible"
+
+  // ################################
+  // ########### COPILOT ###########
+  // ################################
+  "chat.commandCenter.enabled": false
 }
