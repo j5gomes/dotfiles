@@ -161,6 +161,14 @@
     {
       "before": ["<leader>", "H"],
       "commands": [{ "command": "editor.action.showDefinitionPreviewHover" }]
+    },
+    {
+      "before": ["j"],
+      "after": ["g", "j"]
+    },
+    {
+      "before": ["k"],
+      "after": ["g", "k"]
     }
   ],
   "vim.leader": "<space>",
