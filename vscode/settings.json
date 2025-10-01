@@ -6,6 +6,7 @@
   "explorer.compactFolders": false,
   "explorer.sortOrder": "foldersNestsFiles",
   "explorer.confirmDragAndDrop": false,
+  "explorer.openEditors.visible": 1,
 
   // ###################################
   // #### WORKBENCH AND UI SETTINGS ####
@@ -13,8 +14,7 @@
   "workbench.startupEditor": "none",
   "workbench.iconTheme": "material-icon-theme",
   "workbench.productIconTheme": "fluent-icons",
-  "workbench.preferredDarkColorTheme": "Shades of Purple (Super Dark)",
-  "workbench.colorTheme": "Shades of Purple (Super Dark)",
+  "workbench.colorTheme": "Oxygen Theme",
   "workbench.colorCustomizations": {
     "terminal.background": "#00000000"
   },
