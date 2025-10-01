@@ -35,6 +35,8 @@
   "window.commandCenter": false,
   "window.restoreWindows": "one",
   "window.newWindowDimensions": "maximized",
+  "window.nativeTabs": false,
+  "window.titleBarStyle": "native",
 
   // #################################
   // #######  EDITOR SETTINGS ########
