@@ -21,6 +21,7 @@
   "workbench.layoutControl.enabled": false,
   "workbench.settings.applyToAllProfiles": ["workbench.colorCustomizations"],
   "workbench.editor.editorActionsLocation": "hidden",
+  "workbench.activityBar.visible": false,
   "workbench.sideBar.location": "right",
   "workbench.navigationControl.enabled": false,
   "workbench.activityBar.location": "hidden",
@@ -196,7 +197,7 @@
     "apc.menubar.compact": true,
     "backgroundColor": "rgba(123, 123, 123, 0.5)",
     "transparent": true,
-    "titleBarStyle": "hiddenInset",
+    "titleBarStyle": "hidden",
     "vibrancy": "ultra-dark",
     "opacity": 0.95,
     "visualEffectState": "active"
