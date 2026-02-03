@@ -6,7 +6,7 @@
   "explorer.compactFolders": false,
   "explorer.sortOrder": "foldersNestsFiles",
   "explorer.confirmDragAndDrop": false,
-  "explorer.openEditors.visible": 0,
+  "explorer.openEditors.visible": 1,
 
   // ###################################
   // #### WORKBENCH AND UI SETTINGS ####
@@ -14,13 +14,18 @@
   "workbench.startupEditor": "none",
   "workbench.iconTheme": "material-icon-theme",
   "workbench.productIconTheme": "fluent-icons",
-  "workbench.preferredDarkColorTheme": "Tokyo Night Storm",
+  "workbench.colorTheme": "Oxygen Theme",
   "workbench.colorCustomizations": {
     "terminal.background": "#00000000"
   },
   "workbench.layoutControl.enabled": false,
   "workbench.settings.applyToAllProfiles": ["workbench.colorCustomizations"],
   "workbench.editor.editorActionsLocation": "hidden",
+  "workbench.activityBar.visible": false,
+  "workbench.sideBar.location": "right",
+  "workbench.navigationControl.enabled": false,
+  "workbench.activityBar.location": "hidden",
+  "breadcrumbs.enabled": false,
 
   // #################################
   // #######  WINDOW SETTINGS  #######
@@ -28,9 +33,10 @@
   "window.zoomLevel": 0.8,
   "window.autoDetectColorScheme": true,
   "window.commandCenter": false,
-  "window.titleBarStyle": "native",
   "window.restoreWindows": "one",
   "window.newWindowDimensions": "maximized",
+  "window.nativeTabs": false,
+  "window.titleBarStyle": "native",
 
   // #################################
   // #######  EDITOR SETTINGS ########
@@ -61,7 +67,7 @@
   "editor.cursorStyle": "line",
   "editor.cursorBlinking": "solid",
   "editor.wordWrap": "bounded",
-  "editor.wordWrapColumn": 100,
+  "editor.wordWrapColumn": 150,
   "editor.quickSuggestions": {
     "other": true,
     "comments": false,
@@ -158,6 +164,14 @@
     {
       "before": ["<leader>", "H"],
       "commands": [{ "command": "editor.action.showDefinitionPreviewHover" }]
+    },
+    {
+      "before": ["j"],
+      "after": ["g", "j"]
+    },
+    {
+      "before": ["k"],
+      "after": ["g", "k"]
     }
   ],
   "vim.leader": "<space>",
@@ -185,7 +199,7 @@
     "apc.menubar.compact": true,
     "backgroundColor": "rgba(123, 123, 123, 0.5)",
     "transparent": true,
-    "titleBarStyle": "hiddenInset",
+    "titleBarStyle": "hidden",
     "vibrancy": "ultra-dark",
     "opacity": 0.95,
     "visualEffectState": "active"
@@ -257,10 +271,19 @@
   "svelte.enable-ts-plugin": true,
   "window.density.editorTabHeight": "compact",
   "makefile.configureOnOpen": true,
-  "tabnine.experimentalAutoImports": true,
-  "workbench.sideBar.location": "right",
   "[json]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "workbench.activityBar.location": "hidden"
+
+  // ################################
+  // ########### OBSIDIAN ###########
+  // ################################
+  "obsidian-md-vsc.defaultVault": "second-brain",
+  "obsidian-md-vsc.defaultVaultPath": "/Users/jgomes/repos/github/j5gomes/second-brain",
+  "obsidian-md-vsc.defaultNote": "0-inbox/inbox",
+
+  // ################################
+  // ########### COPILOT ###########
+  // ################################
+  "chat.commandCenter.enabled": false
 }

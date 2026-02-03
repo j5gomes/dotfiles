@@ -9,12 +9,31 @@
       "commands": ["editor.action.marker.nextInFiles"]
     }
   },
+  {
+    "key": "ctrl+[", // fold
+    "command": "runCommands",
+    "args": {
+      "commands": ["editor.fold"]
+    }
+  },
+  {
+    "key": "ctrl+]", // go to next problem
+    "command": "runCommands",
+    "args": {
+      "commands": ["editor.unfold"]
+    }
+  },
   // ###################################
   // ########$$$ TOGGLE UI #############
   // ###################################
   {
     "key": "cmd+g",
     "command": "workbench.action.toggleActivityBarVisibility"
+  },
+  {
+    "key": "cmd+k",
+    "command": "workbench.panel.chat",
+    "when": "workbench.panel.chat.view.copilot.active"
   },
   // ###################################
   // ######## PANEL NAVIGATION #########
@@ -34,6 +53,14 @@
   {
     "key": "ctrl+j",
     "command": "workbench.action.navigateDown"
+  },
+  {
+    "key": "alt+p",
+    "command": "search-preview.quickOpenWithPreview"
+  },
+  {
+    "key": "ctrl+c",
+    "command": "workbench.action.editor.nextChange",
+    "when": "editorTextFocus && !textCompareEditorActive"
   }
 ]
-
