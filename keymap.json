@@ -1,0 +1,69 @@
+// Zed keymap
+//
+// For information on binding keys, see the Zed
+// documentation: https://zed.dev/docs/key-bindings
+//
+// To see the default key bindings run `zed: open default keymap`
+// from the command palette.
+[
+  {
+    "context": "Workspace",
+    "bindings": {
+      // "shift shift": "file_finder::Toggle"
+    },
+  },
+  {
+    "context": "Editor && vim_mode == insert",
+    "bindings": {
+      // "j k": "vim::NormalBefore"
+    },
+  },
+
+  // ----- NORMAL MODE -----
+  {
+    "context": "Editor && vim_mode == normal",
+    "bindings": {
+      // Leader mappings
+      "space d": "editor::DeleteLine", // <leader>d → dd
+      "space f f": "file_finder::Toggle", // <leader>ff → quick open
+      "space w": "pane::SplitRight", // <leader>w → split editor
+      "space e": "workspace::ToggleLeftDock", // <leader>e → toggle sidebar
+      "space h": "vim::StartOfLine", // <leader>h → _
+      "space l": "vim::EndOfLine", // <leader>l → $
+      "space H": "editor::Hover", // <leader>H → hover preview
+
+      // Tab navigation
+      "tab": "pane::ActivateNextItem",
+      "shift-tab": "pane::ActivatePreviousItem",
+    },
+  },
+
+  // ----- INSERT MODE -----
+  {
+    "context": "Editor && vim_mode == insert",
+    "bindings": {
+      "j k": "vim::NormalBefore",
+    },
+  },
+
+  // ----- DISABLE CTRL KEYS -----
+  {
+    "context": "Editor",
+    "bindings": {
+      "ctrl-a": null,
+      "ctrl-f": null,
+      "ctrl-c": null,
+      "ctrl-x": null,
+      "ctrl-v": null,
+      "ctrl-z": null,
+      "ctrl-y": null,
+    },
+  },
+  {
+    "context": "Editor",
+    "bindings": {
+      "ctrl-p": "editor::GoToDiagnostic",
+    },
+  },
+]
+
