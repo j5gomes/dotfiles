@@ -1,0 +1,206 @@
+
+{
+  // ################################
+  // #### FILE EXPLORER SETTINGS ####
+  // ################################
+  "explorer.compactFolders": false,
+  "explorer.sortOrder": "foldersNestsFiles",
+  "editor.fontFamily": "Monaspace Neon",
+  "zenMode.fullScreen": false,
+  "zenMode.hideStatusBar": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.fontSize": 14,
+  "github.copilot.nextEditSuggestions.enabled": true,
+  "workbench.panel.showLabels": false,
+  "svelte.enable-ts-plugin": true,
+  "workbench.colorTheme": "j_blow",
+  "workbench.preferredDarkColorTheme": "j_blow",
+  "extensions.experimental.affinity": {
+    "asvetliakov.vscode-neovim": 1,
+  },
+  // #################################
+  // #######  WINDOW SETTINGS  #######
+  // #################################
+  "window.autoDetectColorScheme": true,
+  "window.commandCenter": false,
+  "window.restoreWindows": "one",
+  "window.newWindowDimensions": "maximized",
+
+  // #################################
+  // #######  EDITOR SETTINGS ########
+  // #################################
+  "editor.accessibilitySupport": "off",
+  "editor.stickyScroll.enabled": false,
+  "editor.glyphMargin": false,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "always",
+  },
+  "editor.hideCursorInOverviewRuler": true,
+  "editor.minimap.enabled": false,
+  "editor.scrollbar.vertical": "hidden",
+  "editor.tokenColorCustomizations": {
+    "textMateRules": [
+      {
+        "scope": "keyword.other.dotenv",
+        "settings": {
+          "foreground": "#FF000000",
+        },
+      },
+    ],
+  },
+  "editor.formatOnSave": true,
+  "editor.cursorStyle": "line",
+  "editor.cursorBlinking": "solid",
+  "editor.wordWrap": "bounded",
+  "editor.wordWrapColumn": 100,
+  "editor.quickSuggestions": {
+    "other": true,
+    "comments": false,
+    "strings": false,
+  },
+  "workbench.editor.enablePreview": false,
+  // ##########################
+  // ######### VIM ############
+  // ##########################
+  "vim.foldfix": true,
+  "vim.argumentObjectClosingDelimiters": [],
+  "vim.argumentObjectOpeningDelimiters": [],
+  "vim.highlightedyank.duration": 1,
+  "vim.mouseSelectionGoesIntoVisualMode": false,
+  "vim.useSystemClipboard": true,
+  "vim.easymotion": true,
+  "vim.incsearch": true,
+  "vim.useCtrlKeys": true,
+  "vim.hlsearch": true,
+  "vim.sneak": true,
+  "vim.normalModeKeyBindings": [
+    {
+      "before": ["<leader>", "d"],
+      "after": ["d", "d"],
+    },
+    {
+      "before": ["<tab>"],
+      "commands": ["workbench.action.nextEditor"],
+    },
+    {
+      "before": ["<S-tab>"],
+      "commands": ["workbench.action.previousEditor"],
+    },
+    {
+      "before": ["<leader>", "f", "f"],
+      "commands": ["workbench.action.quickOpen"],
+    },
+    {
+      "before": ["<leader>", "f", "w"],
+      "commands": ["workbench.action.findInFiles"],
+    },
+  ],
+  "vim.insertModeKeyBindings": [
+    {
+      "before": ["j", "k"],
+      "after": ["<Esc>"],
+    },
+    {
+      "before": ["<C-j>"],
+      "after": ["<Esc>"],
+    },
+    {
+      "before": ["<C-k>"],
+      "after": ["<Esc>"],
+    },
+  ],
+  "vim.visualModeKeyBindings": [
+    {
+      "before": [">"],
+      "after": [">", "g", "v"],
+    },
+    {
+      "before": ["<"],
+      "after": ["<", "g", "v"],
+    },
+  ],
+  "vim.normalModeKeyBindingsNonRecursive": [
+    {
+      "before": ["<leader>", "d"],
+      "after": ["d", "d"],
+    },
+    {
+      "before": ["<leader>", "w"],
+      "commands": ["workbench.action.splitEditor"],
+    },
+    {
+      "before": ["<leader>", "e"],
+      "commands": ["workbench.action.toggleSidebarVisibility"],
+    },
+    {
+      "before": ["<leader>", "f"],
+      "commands": ["revealInExplorer"],
+    },
+    {
+      "before": ["<leader>", "h"],
+      "after": ["_"],
+    },
+    {
+      "before": ["<leader>", "l"],
+      "after": ["$"],
+    },
+    {
+      "before": ["<leader>", "H"],
+      "commands": [{ "command": "editor.action.showDefinitionPreviewHover" }],
+    },
+    {
+      "before": ["j"],
+      "after": ["g", "j"],
+    },
+    {
+      "before": ["k"],
+      "after": ["g", "k"],
+    },
+  ],
+  "vim.leader": "<space>",
+  "vim.handleKeys": {
+    "<C-a>": false,
+    "<C-f>": false,
+    // VS Code new marker @ next occurence
+    "<C-c>": false,
+    // Cut
+    "<C-x>": false,
+    // Paste
+    "<C-v>": false,
+    "<C-z>": false,
+    "<C-y>": false,
+  },
+  "workbench.iconTheme": "chalice-icon-theme",
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+  },
+  "chat.viewSessions.orientation": "stacked",
+  "workbench.startupEditor": "none",
+  "explorer.confirmDragAndDrop": false,
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "terminal.integrated.fontFamily": "monospace",
+  "editor.semanticHighlighting.enabled": true,
+  "editor.showUnused": false,
+  "files.autoSave": "afterDelay",
+  "debug.onTaskErrors": "showErrors",
+  "explorer.confirmDelete": false,
+  "git.confirmSync": false,
+  "git.autofetch": true,
+  "security.workspace.trust.untrustedFiles": "open",
+  "update.showReleaseNotes": false,
+  "C_Cpp.default.recursiveIncludes.reduce": "never",
+  "C_Cpp.intelliSenseMemoryLimit": 16384,
+  "C_Cpp.workspaceParsingPriority": "highest",
+  "C_Cpp.default.browse.limitSymbolsToIncludedHeaders": false,
+  "C_Cpp.refactoring.includeHeader": "never",
+  "C_Cpp.intelliSenseCacheSize": 10240,
+  // "chat.agent.enabled": false,
+  // "chat.disableAIFeatures": true,
+  "editor.inlineSuggest.enabled": false,
+  "diffEditor.ignoreTrimWhitespace": false,
+  "editor.smoothScrolling": true,
+  "editor.cursorSmoothCaretAnimation": "on",
+  "workbench.layoutControl.enabled": false,
+  "workbench.activityBar.location": "hidden",
+  "workbench.statusBar.visible": false,
+}
