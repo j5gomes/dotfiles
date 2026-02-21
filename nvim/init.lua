@@ -1,9 +1,7 @@
 -- init.lua
--- ===========================
--- Basic Windows Neovim Setup
--- ===========================
 vim.g.mapleader = " " -- Leader = Space
 vim.opt.termguicolors = true -- Needed for modern themes
+vim.opt.clipboard = "unnamedplus" -- Use system clipboard
 
 -- ===========================
 -- lazy.nvim setup
@@ -14,7 +12,8 @@ if not vim.loop.fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
-require("lazy").setup({ -- ===========================
+require("lazy").setup({ 
+-- ===========================
 -- Theme: naysayer-colors
 -- ===========================
 {
@@ -23,7 +22,8 @@ require("lazy").setup({ -- ===========================
     config = function()
         vim.cmd.colorscheme("naysayer")
     end
-}, -- ===========================
+}, 
+-- ===========================
 -- File Explorer: nvim-tree
 -- ===========================
 {
@@ -63,7 +63,8 @@ require("lazy").setup({ -- ===========================
             }
         }
     end
-}, -- ===========================
+}, 
+-- ===========================
 -- LazyGit integration
 -- ===========================
 {
@@ -85,7 +86,7 @@ vim.keymap.set("n", "<leader>e", "<cmd>NvimTreeToggle<cr>", {
     desc = "Toggle file explorer"
 })
 
--- Window navigation (Emacs style)
+-- Window navigation
 vim.keymap.set("n", "<C-h>", "<C-w>h", {
     desc = "Focus left"
 })
@@ -109,21 +110,35 @@ vim.keymap.set("n", "<leader>q", "<cmd>bd<cr>", {
     desc = "Close current buffer"
 })
 
--- Optional: open a file in vertical split from anywhere
-vim.keymap.set("n", "<leader>sv", "<cmd>vsplit<cr>", {
-    desc = "Vertical split current buffer"
-})
-
 -- LazyGit keymap
 vim.keymap.set("n", "<leader>g", "<cmd>LazyGit<cr>", {
     desc = "Open LazyGit"
 })
 
--- ===========================
--- nvim-tree split behavior
--- ===========================
--- Press 'v' or 's' in the explorer to open new files in vertical/horizontal split
--- They will open **to the right or below your main buffer**, not next to the explorer
+-- <leader>h → go to first non-blank character (_)
+vim.keymap.set("n", "<leader>h", "_", {
+    desc = "Go to first non-blank character"
+})
+
+-- <leader>l → go to end of line ($)
+vim.keymap.set("n", "<leader>l", "$", {
+    desc = "Go to end of line"
+})
+
+-- <leader>H → show LSP hover (definition preview equivalent)
+vim.keymap.set("n", "<leader>H", vim.lsp.buf.hover, {
+    desc = "Show hover documentation"
+})
+
+-- j → gj (move by visual line when wrapped)
+vim.keymap.set("n", "j", "gj", {
+    desc = "Move down by visual line"
+})
+
+-- k → gk (move up by visual line when wrapped)
+vim.keymap.set("n", "k", "gk", {
+    desc = "Move up by visual line"
+})
 
 -- ===========================
 -- Auto header for new C++ files with filename and date
