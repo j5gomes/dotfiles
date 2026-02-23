@@ -1,24 +1,32 @@
 {
   // #################################
+  // ###########  GENERAL ############
+  // #################################
+  "chat.agent.enabled": false,
+  "update.showReleaseNotes": false,
+  "security.workspace.trust.untrustedFiles": "open",
+
+  // #################################
   // #######  WINDOW SETTINGS  #######
   // #################################
   "window.autoDetectColorScheme": true,
   "window.commandCenter": false,
   "window.restoreWindows": "one",
   "window.newWindowDimensions": "maximized",
+  "window.menuBarVisibility": "toggle",
 
   // #################################
   // #####  WORKBENCH / UI LAYOUT ####
   // #################################
   "workbench.colorTheme": "j_blow",
   "workbench.preferredDarkColorTheme": "j_blow",
-  "workbench.iconTheme": "chalice-icon-theme",
+  "workbench.iconTheme": "vs-minimal",
   "workbench.startupEditor": "none",
   "workbench.editor.enablePreview": false,
   "workbench.panel.showLabels": false,
   "workbench.layoutControl.enabled": false,
   "workbench.activityBar.location": "hidden",
-  "workbench.statusBar.visible": false,
+  "workbench.statusBar.visible": true,
 
   // #################################
   // ########  ZEN MODE SETTINGS #####
@@ -37,10 +45,9 @@
   // #################################
   // #######  EDITOR APPEARANCE ######
   // #################################
-  "editor.fontFamily": "Monaspace Neon",
-  "editor.fontSize": 14,
+  "editor.fontFamily": "Liberation Mono",
+  "editor.fontSize": 15,
   "editor.minimap.enabled": false,
-  "editor.glyphMargin": false,
   "editor.scrollbar.vertical": "hidden",
   "editor.hideCursorInOverviewRuler": true,
   "editor.cursorStyle": "line",
@@ -59,6 +66,8 @@
       }
     ]
   },
+  "custom-ui-style.font.monospace": "\"Liberation Mono\"",
+  "custom-ui-style.font.sansSerif": "\"Liberation Mono\"",
 
   // #################################
   // ########  EDITOR BEHAVIOR #######
@@ -66,6 +75,7 @@
   "editor.accessibilitySupport": "off",
   "editor.stickyScroll.enabled": false,
   "editor.formatOnSave": true,
+  "editor.formatOnSaveMode": "file",
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "editor.inlineSuggest.enabled": false,
   "editor.codeActionsOnSave": {
@@ -82,18 +92,22 @@
     "comments": false,
     "strings": false
   },
-
   // #################################
   // ###########  FILES ##############
   // #################################
   "files.autoSave": "afterDelay",
-  "security.workspace.trust.untrustedFiles": "open",
-  "update.showReleaseNotes": false,
+  "[jsonc]": {
+    "editor.defaultFormatter": "vscode.json-language-features"
+  },
+  "[lua]": {
+    "editor.defaultFormatter": "yinfei.luahelper"
+  },
 
   // #################################
   // ###########  TERMINAL ###########
   // #################################
-  "terminal.integrated.fontFamily": "monospace",
+  "terminal.integrated.fontFamily": "Liberation Mono",
+  "terminal.integrated.tabs.location": "left",
 
   // #################################
   // ###########  TYPESCRIPT #########
@@ -127,6 +141,14 @@
   // ###########  CHAT ###############
   // #################################
   "chat.viewSessions.orientation": "stacked",
+  "chat.agent.codeBlockProgress": false,
+  "chat.agent.thinking.terminalTools": false,
+  "chat.agent.thinking.generateTitles": false,
+  "chat.agentsControl.enabled": false,
+  "chat.checkpoints.enabled": false,
+  "chat.detectParticipant.enabled": false,
+  "chat.editing.confirmEditRequestRemoval": false,
+  "chat.editing.confirmEditRequestRetry": false,
 
   // #################################
   // ############  VIM ###############
@@ -143,11 +165,19 @@
   "vim.useCtrlKeys": true,
   "vim.hlsearch": true,
   "vim.sneak": true,
-
   "vim.normalModeKeyBindings": [
-    { "before": ["<leader>", "d"], "after": ["d", "d"] },
-    { "before": ["<tab>"], "commands": ["workbench.action.nextEditor"] },
-    { "before": ["<S-tab>"], "commands": ["workbench.action.previousEditor"] },
+    {
+      "before": ["<leader>", "d"],
+      "after": ["d", "d"]
+    },
+    {
+      "before": ["<tab>"],
+      "commands": ["workbench.action.nextEditor"]
+    },
+    {
+      "before": ["<S-tab>"],
+      "commands": ["workbench.action.previousEditor"]
+    },
     {
       "before": ["<leader>", "f", "f"],
       "commands": ["workbench.action.quickOpen"]
@@ -157,20 +187,35 @@
       "commands": ["workbench.action.findInFiles"]
     }
   ],
-
   "vim.insertModeKeyBindings": [
-    { "before": ["j", "k"], "after": ["<Esc>"] },
-    { "before": ["<C-j>"], "after": ["<Esc>"] },
-    { "before": ["<C-k>"], "after": ["<Esc>"] }
+    {
+      "before": ["j", "k"],
+      "after": ["<Esc>"]
+    },
+    {
+      "before": ["<C-j>"],
+      "after": ["<Esc>"]
+    },
+    {
+      "before": ["<C-k>"],
+      "after": ["<Esc>"]
+    }
   ],
-
   "vim.visualModeKeyBindings": [
-    { "before": [">"], "after": [">", "g", "v"] },
-    { "before": ["<"], "after": ["<", "g", "v"] }
+    {
+      "before": [">"],
+      "after": [">", "g", "v"]
+    },
+    {
+      "before": ["<"],
+      "after": ["<", "g", "v"]
+    }
   ],
-
   "vim.normalModeKeyBindingsNonRecursive": [
-    { "before": ["<leader>", "d"], "after": ["d", "d"] },
+    {
+      "before": ["<leader>", "d"],
+      "after": ["d", "d"]
+    },
     {
       "before": ["<leader>", "w"],
       "commands": ["workbench.action.splitEditor"]
@@ -179,17 +224,33 @@
       "before": ["<leader>", "e"],
       "commands": ["workbench.action.toggleSidebarVisibility"]
     },
-    { "before": ["<leader>", "f"], "commands": ["revealInExplorer"] },
-    { "before": ["<leader>", "h"], "after": ["_"] },
-    { "before": ["<leader>", "l"], "after": ["$"] },
+    {
+      "before": ["<leader>", "f"],
+      "commands": ["revealInExplorer"]
+    },
+    {
+      "before": ["<leader>", "h"],
+      "after": ["_"]
+    },
+    {
+      "before": ["<leader>", "l"],
+      "after": ["$"]
+    },
     {
       "before": ["<leader>", "H"],
-      "commands": [{ "command": "editor.action.showDefinitionPreviewHover" }]
+      "commands": [
+        {"command": "editor.action.showDefinitionPreviewHover"}
+      ]
     },
-    { "before": ["j"], "after": ["g", "j"] },
-    { "before": ["k"], "after": ["g", "k"] }
+    {
+      "before": ["j"],
+      "after": ["g", "j"]
+    },
+    {
+      "before": ["k"],
+      "after": ["g", "k"]
+    }
   ],
-
   "vim.handleKeys": {
     "<C-a>": false,
     "<C-f>": false,
@@ -213,5 +274,28 @@
   "C_Cpp.workspaceParsingPriority": "highest",
   "C_Cpp.default.browse.limitSymbolsToIncludedHeaders": false,
   "C_Cpp.refactoring.includeHeader": "never",
-  "C_Cpp.intelliSenseCacheSize": 10240
+  "C_Cpp.intelliSenseCacheSize": 10240,
+
+  // #################################
+  // #######  WINDOWS SPECIFIC #######
+  // #################################
+  "hexeditor.columnWidth": 16,
+  "hexeditor.showDecodedText": false,
+  "hexeditor.defaultEndianness": "little",
+  "hexeditor.inspectorType": "aside",
+
+  // #################################
+  // #######  FILE HEADER ############
+  // #################################
+  "fileHeaderComment.template": {
+    "*": [
+      "${commentbegin}======================================================================",
+      "${commentprefix} $File: $filename$",
+      "${commentprefix} $Date: $date$",
+      "${commentprefix} $Revision: $revision$",
+      "${commentprefix} $Creator: $author$",
+      "${commentprefix} $Notice: (C) Copyright 2026 by jgomes, Inc. All Rights Reserved. $",
+      "========================================================================${commentend}"
+    ]
+  }
 }
