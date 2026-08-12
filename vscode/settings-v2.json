@@ -238,9 +238,7 @@
     },
     {
       "before": ["<leader>", "H"],
-      "commands": [
-        {"command": "editor.action.showDefinitionPreviewHover"}
-      ]
+      "commands": [{ "command": "editor.action.showDefinitionPreviewHover" }]
     },
     {
       "before": ["j"],

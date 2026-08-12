@@ -7,7 +7,6 @@
   "explorer.sortOrder": "foldersNestsFiles",
   "explorer.confirmDragAndDrop": false,
   "explorer.openEditors.visible": 1,
-
   // ###################################
   // #### WORKBENCH AND UI SETTINGS ####
   // ###################################
@@ -19,14 +18,15 @@
     "terminal.background": "#00000000"
   },
   "workbench.layoutControl.enabled": false,
-  "workbench.settings.applyToAllProfiles": ["workbench.colorCustomizations"],
+  "workbench.settings.applyToAllProfiles": [
+    "workbench.colorCustomizations"
+  ],
   "workbench.editor.editorActionsLocation": "hidden",
   "workbench.activityBar.visible": false,
   "workbench.sideBar.location": "right",
   "workbench.navigationControl.enabled": false,
   "workbench.activityBar.location": "hidden",
   "breadcrumbs.enabled": false,
-
   // #################################
   // #######  WINDOW SETTINGS  #######
   // #################################
@@ -37,7 +37,6 @@
   "window.newWindowDimensions": "maximized",
   "window.nativeTabs": false,
   "window.titleBarStyle": "native",
-
   // #################################
   // #######  EDITOR SETTINGS ########
   // #################################
@@ -74,7 +73,6 @@
     "strings": false
   },
   "workbench.editor.enablePreview": false,
-
   // ##########################
   // ######### VIM ############
   // ##########################
@@ -92,86 +90,185 @@
   "vim.sneak": true,
   "vim.normalModeKeyBindings": [
     {
-      "before": ["<leader>", "d"],
-      "after": ["d", "d"]
+      "before": [
+        "<leader>",
+        "d"
+      ],
+      "after": [
+        "d",
+        "d"
+      ]
     },
     {
-      "before": ["<tab>"],
-      "commands": ["workbench.action.nextEditor"]
+      "before": [
+        "<tab>"
+      ],
+      "commands": [
+        "workbench.action.nextEditor"
+      ]
     },
     {
-      "before": ["<S-tab>"],
-      "commands": ["workbench.action.previousEditor"]
+      "before": [
+        "<S-tab>"
+      ],
+      "commands": [
+        "workbench.action.previousEditor"
+      ]
     },
     {
-      "before": ["<leader>", "f", "f"],
-      "commands": ["workbench.action.quickOpen"]
+      "before": [
+        "<leader>",
+        "f",
+        "f"
+      ],
+      "commands": [
+        "workbench.action.quickOpen"
+      ]
     },
     {
-      "before": ["<leader>", "f", "w"],
-      "commands": ["workbench.action.findInFiles"]
+      "before": [
+        "<leader>",
+        "f",
+        "w"
+      ],
+      "commands": [
+        "workbench.action.findInFiles"
+      ]
     }
   ],
   "vim.insertModeKeyBindings": [
     {
-      "before": ["j", "k"],
-      "after": ["<Esc>"]
+      "before": [
+        "j",
+        "k"
+      ],
+      "after": [
+        "<Esc>"
+      ]
     },
     {
-      "before": ["<C-j>"],
-      "after": ["<Esc>"]
+      "before": [
+        "<C-j>"
+      ],
+      "after": [
+        "<Esc>"
+      ]
     },
     {
-      "before": ["<C-k>"],
-      "after": ["<Esc>"]
+      "before": [
+        "<C-k>"
+      ],
+      "after": [
+        "<Esc>"
+      ]
     }
   ],
   "vim.visualModeKeyBindings": [
     {
-      "before": [">"],
-      "after": [">", "g", "v"]
+      "before": [
+        ">"
+      ],
+      "after": [
+        ">",
+        "g",
+        "v"
+      ]
     },
     {
-      "before": ["<"],
-      "after": ["<", "g", "v"]
+      "before": [
+        "<"
+      ],
+      "after": [
+        "<",
+        "g",
+        "v"
+      ]
     }
   ],
   "vim.normalModeKeyBindingsNonRecursive": [
     {
-      "before": ["<leader>", "d"],
-      "after": ["d", "d"]
+      "before": [
+        "<leader>",
+        "d"
+      ],
+      "after": [
+        "d",
+        "d"
+      ]
     },
     {
-      "before": ["<leader>", "w"],
-      "commands": ["workbench.action.splitEditor"]
+      "before": [
+        "<leader>",
+        "w"
+      ],
+      "commands": [
+        "workbench.action.splitEditor"
+      ]
     },
     {
-      "before": ["<leader>", "e"],
-      "commands": ["workbench.action.toggleSidebarVisibility"]
+      "before": [
+        "<leader>",
+        "e"
+      ],
+      "commands": [
+        "workbench.action.toggleSidebarVisibility"
+      ]
     },
     {
-      "before": ["<leader>", "f"],
-      "commands": ["revealInExplorer"]
+      "before": [
+        "<leader>",
+        "f"
+      ],
+      "commands": [
+        "revealInExplorer"
+      ]
     },
     {
-      "before": ["<leader>", "h"],
-      "after": ["_"]
+      "before": [
+        "<leader>",
+        "h"
+      ],
+      "after": [
+        "_"
+      ]
     },
     {
-      "before": ["<leader>", "l"],
-      "after": ["$"]
+      "before": [
+        "<leader>",
+        "l"
+      ],
+      "after": [
+        "$"
+      ]
     },
     {
-      "before": ["<leader>", "H"],
-      "commands": [{ "command": "editor.action.showDefinitionPreviewHover" }]
+      "before": [
+        "<leader>",
+        "H"
+      ],
+      "commands": [
+        {
+          "command": "editor.action.showDefinitionPreviewHover"
+        }
+      ]
     },
     {
-      "before": ["j"],
-      "after": ["g", "j"]
+      "before": [
+        "j"
+      ],
+      "after": [
+        "g",
+        "j"
+      ]
     },
     {
-      "before": ["k"],
-      "after": ["g", "k"]
+      "before": [
+        "k"
+      ],
+      "after": [
+        "g",
+        "k"
+      ]
     }
   ],
   "vim.leader": "<space>",
@@ -215,7 +312,6 @@
     ".title-label > h2": "display: none", // Remove primary side bar title
     ".nosidebar .inline-tabs-placeholder": "width: 75px" // Align tabs to not overlap window controls when primary bar is hidden
   },
-
   // ###########################################
   // #######  LANGUAGE SUPPORT SETTINGS ########
   // ###########################################
@@ -241,9 +337,18 @@
     "workbench.action.tasks.runTask"
   ],
   "tailwindCSS.experimental.classRegex": [
-    ["cva\\(([^)]*)\\)", "[\"'`]([^\"'`]*).*?[\"'`]"],
-    ["cx\\(([^)]*)\\)", "(?:'|\"|`)([^']*)(?:'|\"|`)"],
-    ["cnva\\(([^)]*)\\)", "(?:'|\"|`)([^']*)(?:'|\"|`)"]
+    [
+      "cva\\(([^)]*)\\)",
+      "[\"'`]([^\"'`]*).*?[\"'`]"
+    ],
+    [
+      "cx\\(([^)]*)\\)",
+      "(?:'|\"|`)([^']*)(?:'|\"|`)"
+    ],
+    [
+      "cnva\\(([^)]*)\\)",
+      "(?:'|\"|`)([^']*)(?:'|\"|`)"
+    ]
   ],
   "update.mode": "manual",
   "extensions.autoCheckUpdates": false,
@@ -251,7 +356,6 @@
   "gitlens.advanced.messages": {
     "suppressIntegrationRequestTimedOutWarning": true
   },
-
   // ################################
   // ######### OPTIMIZATION #########
   // ################################
@@ -274,14 +378,12 @@
   "[json]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-
   // ################################
   // ########### OBSIDIAN ###########
   // ################################
   "obsidian-md-vsc.defaultVault": "second-brain",
   "obsidian-md-vsc.defaultVaultPath": "/Users/jgomes/repos/github/j5gomes/second-brain",
   "obsidian-md-vsc.defaultNote": "0-inbox/inbox",
-
   // ################################
   // ########### COPILOT ###########
   // ################################
