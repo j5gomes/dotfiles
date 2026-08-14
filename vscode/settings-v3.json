@@ -32,6 +32,10 @@
   "workbench.browser.showInTitleBar": false,
   "workbench.welcomePage.walkthroughs.openOnInstall": false,
   "breadcrumbs.enabled": false,
+  "workbench.tree.enableStickyScroll": false,
+  "workbench.editorAssociations": {
+    "*.svg": "default"
+  },
 
   // #################################
   // #######  WINDOW SETTINGS  #######
@@ -57,7 +61,6 @@
   // #################################
   "editor.fontFamily": "Iosevka",
   "editor.fontSize": 16,
-  "editor.lineNumbers": "relative",
   "editor.glyphMargin": false,
   "editor.minimap.enabled": false,
   "editor.scrollbar.vertical": "hidden",
@@ -247,7 +250,6 @@
     "window.customTitleBarVisibility": "never",
     "apc.menubar.compact": true,
     "backgroundColor": "rgba(123, 123, 123, 0.5)",
-    "transparent": true,
     "titleBarStyle": "hiddenInset",
     "vibrancy": "ultra-dark",
     "opacity": 0.95,
@@ -259,10 +261,6 @@
   },
   "apc.header": {
     "height": 18
-  },
-  "apc.stylesheet": {
-    ".title-label > h2": "display: none", // Remove primary side bar title
-    ".nosidebar .inline-tabs-placeholder": "width: 75px" // Align tabs to not overlap window controls when primary bar is hidden
   },
 
   // ###########################################
@@ -286,7 +284,6 @@
   "[json]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "javascript.updateImportsOnFileMove.enabled": "always",
   "svelte.enable-ts-plugin": true,
   "tailwindCSS.experimental.classRegex": [
     ["cva\\(([^)]*)\\)", "[\"'`]([^\"'`]*).*?[\"'`]"],
@@ -307,7 +304,6 @@
   "gitlens.advanced.messages": {
     "suppressIntegrationRequestTimedOutWarning": true
   },
-  "gitlens.ai.enabled": false,
 
   // ################################
   // ########### OBSIDIAN ###########
@@ -317,10 +313,8 @@
   "obsidian-md-vsc.defaultNote": "0-inbox/inbox",
 
   // ################################
-  // ####  AI / AGENT FEATURES  #####
-  // ####  (all disabled)       #####
+  // ##### DISABLE AI FEATURES ######
   // ################################
-  "chat.disableAIFeatures": true,
   "chat.commandCenter.enabled": false,
   "chat.agent.enabled": false,
   "chat.detectParticipant.enabled": false,
@@ -328,21 +322,7 @@
   "chat.checkpoints.enabled": false,
   "chat.editing.confirmEditRequestRemoval": false,
   "chat.editing.confirmEditRequestRetry": false,
-  "github.copilot.nextEditSuggestions.enabled": false,
-
-  // ################################
-  // ###  JSON SCHEMA TRUST  ########
-  // ################################
-  "json.schemaDownload.trustedDomains": {
-    "https://schemastore.azurewebsites.net/": true,
-    "https://raw.githubusercontent.com/microsoft/vscode/": true,
-    "https://raw.githubusercontent.com/devcontainers/spec/": true,
-    "https://www.schemastore.org/": true,
-    "https://json.schemastore.org/": true,
-    "https://json-schema.org/": true,
-    "https://developer.microsoft.com/json-schemas/": true,
-    "https://biomejs.dev": true
-  },
+  "gitlens.ai.enabled": false,
 
   // ################################
   // #####  TASK BUTTONS ############
